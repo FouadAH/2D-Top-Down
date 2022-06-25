@@ -12,10 +12,12 @@ public class GameUI : MonoBehaviour
     {
         if (changeAmount < 0)
         {
+            // Destroy will remove the GameObject from the hierarchy
             Destroy(healthParent.transform.GetChild(healthParent.transform.childCount - 1).gameObject);
         }
         else
         {
+            // Instantiate will create a new GameObject
             Instantiate(healthSprite, healthParent.transform);
         }
     }
