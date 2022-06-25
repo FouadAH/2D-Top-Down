@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public int damageDealt = 1;
+    public int damage = 1;
 }

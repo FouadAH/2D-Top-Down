@@ -12,12 +12,12 @@ public class EnemyController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void TakeDamage()
+    void TakeDamage(int damageDealt)
     {
         //Debug.Log("Ouch");
 
         animator.SetTrigger("Hit");
-        health--;
+        health-= damageDealt; // Shorthand for health = health - damageDealt
         if (health <= 0)
         {
             gameObject.SetActive(false);
@@ -33,7 +33,8 @@ public class EnemyController : MonoBehaviour
 
         if (collision.GetComponent<Weapon>() != null)
         {
-            TakeDamage();
+            //Calling the TakeDamage function and passing the weapons damage value
+            TakeDamage(collision.GetComponent<Weapon>().damage);
         }
     }
 }
