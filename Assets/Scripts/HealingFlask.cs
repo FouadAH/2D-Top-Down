@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HealingFlask : MonoBehaviour
+{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerController playerController = collision.GetComponent<PlayerController>();
+            if (playerController.health < playerController.maxHealth)
+            {
+                collision.GetComponent<PlayerController>().Heal();
+                gameObject.SetActive(false);
+            }
+        }
+    }
+}
