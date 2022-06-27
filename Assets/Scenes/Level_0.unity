@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cde7735781522c4f92a7f17f7dd0c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDealt: 1
+  damage: 1
 --- !u!1001 &341881824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7767,7 +7767,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e3ca6cb5600917e4e93db63204840148, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8069,7 +8069,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7779768, y: 1}
+    m_SensorSize: {x: 1.7782763, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
