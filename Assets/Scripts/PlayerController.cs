@@ -80,13 +80,13 @@ public class PlayerController : MonoBehaviour
     public void Heal()
     {
         health++; // Shorthand for health = health + 1
-        gameUI.UpdateHealthUI(1);
+        gameUI.Heal(1);
     }
 
     public void TakeDamage()
     {
         health--; // Shorthand for health = health - 1
-        gameUI.UpdateHealthUI(-1);
+        gameUI.Damage(1);
         impulseSource.GenerateImpulse();
         CheckDeath();
     }
